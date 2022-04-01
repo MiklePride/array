@@ -18,7 +18,6 @@
             }
             Console.WriteLine();
         }
-
         for (arrayStringCounter = 0; arrayStringCounter < two_Dimensional_array.GetLength(0); arrayStringCounter++)
         {
             for (arrayColumnCounter = 0; arrayColumnCounter < two_Dimensional_array.GetLength(1); arrayColumnCounter++)
@@ -27,10 +26,23 @@
                 {
                     sumOfSecondLine += two_Dimensional_array[arrayStringCounter, arrayColumnCounter];
                 }
-
+                else
+                {
+                    continue;
+                }
+            }
+        }
+        for (arrayStringCounter = 0; arrayStringCounter < two_Dimensional_array.GetLength(0); arrayStringCounter++)
+        {
+            for (arrayColumnCounter = 0; arrayColumnCounter < two_Dimensional_array.GetLength(1); arrayColumnCounter++)
+            {
                 if (arrayColumnCounter == numberColumn)
                 {
                     firstColumnMultiplication = two_Dimensional_array[arrayStringCounter, arrayColumnCounter] * firstColumnMultiplication;
+                }
+                else
+                {
+                    continue;
                 }
             }
         }
