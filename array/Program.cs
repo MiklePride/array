@@ -18,35 +18,14 @@
             }
             Console.WriteLine();
         }
-        for (arrayStringCounter = 0; arrayStringCounter < two_Dimensional_array.GetLength(0); arrayStringCounter++)
+        for (arrayColumnCounter = 0; arrayColumnCounter < two_Dimensional_array.GetLength(0); arrayColumnCounter++)
         {
-            for (arrayColumnCounter = 0; arrayColumnCounter < two_Dimensional_array.GetLength(1); arrayColumnCounter++)
-            {
-                if (arrayStringCounter == numberString)
-                {
-                    sumOfSecondLine += two_Dimensional_array[arrayStringCounter, arrayColumnCounter];
-                }
-                else
-                {
-                    continue;
-                }
-            }
+            firstColumnMultiplication *= two_Dimensional_array[arrayColumnCounter, numberColumn];
         }
-        for (arrayStringCounter = 0; arrayStringCounter < two_Dimensional_array.GetLength(0); arrayStringCounter++)
+        for (arrayStringCounter = 0; arrayStringCounter < two_Dimensional_array.GetLength(1); arrayStringCounter++)
         {
-            for (arrayColumnCounter = 0; arrayColumnCounter < two_Dimensional_array.GetLength(1); arrayColumnCounter++)
-            {
-                if (arrayColumnCounter == numberColumn)
-                {
-                    firstColumnMultiplication = two_Dimensional_array[arrayStringCounter, arrayColumnCounter] * firstColumnMultiplication;
-                }
-                else
-                {
-                    continue;
-                }
-            }
+            sumOfSecondLine += two_Dimensional_array[numberString, arrayStringCounter];
         }
-        Console.WriteLine($"Сумма второй строки массива - {sumOfSecondLine}\nПроизведение первого столбца массива - {firstColumnMultiplication}");
-    }
-
+        Console.WriteLine($"Произведение первой колонки - {firstColumnMultiplication}\nСумма второй строки - {sumOfSecondLine}");
+    } 
 }
