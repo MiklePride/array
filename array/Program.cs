@@ -2,31 +2,31 @@
 {
     static void Main(string[] args)
     {
-        int[,] two_dimensional_array = { { 5, 2, 3, 7 }, { 4, 4, 6, 9 }, { 7, 8, 9, 1 } };
-        int arrayStringCounter;
-        int arrayColumnCounter;
+        int[,] twoDimensionalArray = { { 5, 2, 3, 7 }, { 4, 4, 6, 9 }, { 7, 8, 9, 1 } };
+        int twoDimensionalArrayStringCounter;
+        int twoDimensionalArrayColumnCounter;
         int sumOfSecondLine = 0;
         int firstColumnMultiplication = 1;
         int numberString = 1;
         int numberColumn = 0;
 
-        for (arrayStringCounter = 0; arrayStringCounter < two_dimensional_array.GetLength(0); arrayStringCounter++)
+        for (twoDimensionalArrayStringCounter = 0; twoDimensionalArrayStringCounter < twoDimensionalArray.GetLength(0); twoDimensionalArrayStringCounter++)
         {
-            for (arrayColumnCounter = 0; arrayColumnCounter < two_dimensional_array.GetLength(1); arrayColumnCounter++)
+            for (twoDimensionalArrayColumnCounter = 0; twoDimensionalArrayColumnCounter < twoDimensionalArray.GetLength(1); twoDimensionalArrayColumnCounter++)
             {
-                Console.Write(two_dimensional_array[arrayStringCounter, arrayColumnCounter]);
+                Console.Write(twoDimensionalArray[twoDimensionalArrayStringCounter, twoDimensionalArrayColumnCounter]);
             }
             Console.WriteLine();
         }
 
-        for (arrayColumnCounter = 0; arrayColumnCounter < two_dimensional_array.GetLength(0); arrayColumnCounter++)
+        for (twoDimensionalArrayColumnCounter = 0; twoDimensionalArrayColumnCounter < twoDimensionalArray.GetLength(0); twoDimensionalArrayColumnCounter++)
         {
-            firstColumnMultiplication *= two_dimensional_array[arrayColumnCounter, numberColumn];
+            firstColumnMultiplication *= twoDimensionalArray[twoDimensionalArrayColumnCounter, numberColumn];
         }
 
-        for (arrayStringCounter = 0; arrayStringCounter < two_dimensional_array.GetLength(1); arrayStringCounter++)
+        for (twoDimensionalArrayStringCounter = 0; twoDimensionalArrayStringCounter < twoDimensionalArray.GetLength(1); twoDimensionalArrayStringCounter++)
         {
-            sumOfSecondLine += two_dimensional_array[numberString, arrayStringCounter];
+            sumOfSecondLine += twoDimensionalArray[numberString, twoDimensionalArrayStringCounter];
         }
         Console.WriteLine($"Произведение первой колонки - {firstColumnMultiplication}\nСумма второй строки - {sumOfSecondLine}");
     }
